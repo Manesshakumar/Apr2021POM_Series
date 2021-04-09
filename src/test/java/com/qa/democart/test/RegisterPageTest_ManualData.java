@@ -21,9 +21,5 @@ public class RegisterPageTest_ManualData extends BaseTest {
 				"1234567890", "yes");
 	}
 	
-	/**
-	 * For Manual purpose of data.
-	 * 
-	 */
-
+	
 }
