@@ -1,20 +1,25 @@
 package com.qa.democart.pages;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.qa.Utils.ElementUtil;
 
 public class LoginPage {
+	
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(LoginPage.class));
+
 	private WebDriver driver;
-	ElementUtil elementUtil;
+	private ElementUtil elementUtil;
 
 	// 2.By Locator:
 
-	By emailID = By.id("input-email");
-	By password = By.id("input-password");
-	By loginBtn = By.xpath("//input[@type = 'submit']");
-	By headertext = By.xpath("//h2[text() = 'Returning Customer']");
+	private By emailID = By.id("input-email");
+	private By password = By.id("input-password");
+	private By loginBtn = By.xpath("//input[@type = 'submit']");
+	private By headertext = By.xpath("//h2[text() = 'Returning Customer']");
+	private By registerLink = By.xpath("//div[@class = 'list-group'] /a[text() = 'Register']");
 
 	// 3.Cons:
 	public LoginPage(WebDriver driver) {
@@ -25,6 +30,7 @@ public class LoginPage {
 	// 4.PageActions:
 
 	public String titleCheck() {
+		LOGGER.info("Title Check");
 		return elementUtil.getTitle();
 
 	}
@@ -39,6 +45,11 @@ public class LoginPage {
 		elementUtil.doClick(loginBtn);
 		return new AccountPage(driver);
 
+	}
+	
+	public RegisterPage doRegisterClick() {
+		elementUtil.doClick(registerLink);
+		return new RegisterPage(driver);
 	}
 
 }

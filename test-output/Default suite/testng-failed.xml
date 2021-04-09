@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.democart.test.LoginPageTest">
+      <class name="com.qa.democart.test.RegisterPageTest">
         <methods>
-          <include name="titleTest"/>
-          <include name="doLoginTest"/>
+          <include name="doRegistrationTest"/>
+          <include name="getRegisterClick"/>
           <include name="setUp"/>
-          <include name="headerDisplayTest"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.qa.democart.test.LoginPageTest -->
+      </class> <!-- com.qa.democart.test.RegisterPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

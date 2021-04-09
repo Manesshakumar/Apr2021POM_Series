@@ -9,6 +9,8 @@ import org.testng.annotations.BeforeTest;
 import com.qa.democart.Factory.DriverFactory;
 import com.qa.democart.pages.AccountPage;
 import com.qa.democart.pages.LoginPage;
+import com.qa.democart.pages.ProductInfoPage;
+import com.qa.democart.pages.RegisterPage;
 
 public class BaseTest {
 
@@ -17,6 +19,8 @@ public class BaseTest {
 	WebDriver driver;
 	public LoginPage loginPage ;
 	public AccountPage accountPage;
+	public ProductInfoPage productInfoPage;
+	public RegisterPage registerPage;
 	
 
 	@BeforeTest

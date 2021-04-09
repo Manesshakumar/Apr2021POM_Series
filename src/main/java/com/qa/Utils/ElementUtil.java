@@ -177,6 +177,12 @@ public class ElementUtil{
 		return driver.getTitle();
 	}
 	
+	public String waitForPageExactTitle(String titleValue, int timeOut){
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		wait.until(ExpectedConditions.titleIs(titleValue));
+		return driver.getTitle();
+	}
+	
 	public Alert waitForAlertToBePresent(int timeOut){
 		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		return wait.until(ExpectedConditions.alertIsPresent());
