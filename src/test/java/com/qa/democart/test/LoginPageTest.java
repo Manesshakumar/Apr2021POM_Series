@@ -32,6 +32,7 @@ public class LoginPageTest extends BaseTest{
     @Step("Enter username :{0}and Enter password : {1}")
     public void doLoginTest() {
     	System.out.println("Verify Login Page Test");
+    	
     	String un = prop.getProperty("username");
     	String pwd = prop.getProperty("password");
         loginPage.doLogin(un, pwd);
